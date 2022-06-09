@@ -143,7 +143,7 @@ class ChoiceFilter(BaseChoiceFilter):
             if cleaned_values:
                 return cleaned_values
             elif self.default_value:
-                return [self.default_value]
+                return self.default_value
             else:
                 return []
         return super().clean(request)
